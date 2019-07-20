@@ -2,31 +2,29 @@ package datastructure.charstack;
 
 public class CharStack {
 
+    int maxSize;
+    int top = -1;
+    char[] charStack;
 
-    public String reverseByLoop(String input){
-        char[] chars = input.toCharArray();
-        StringBuilder initial = new StringBuilder();
-
-
-        for(int i=0; i< chars.length; i++){
-            initial.append(chars[i]);
-        }
-
-        StringBuilder reversed = new StringBuilder();
-        for(int i=chars.length-1; i>=0;i--){
-            reversed.append(chars[i]);
-        }
-
-        System.out.printf("initial String is %s and after reversing %s",initial, reversed);
-
-
-        return reversed.toString();
+    public CharStack(int maxSize){
+        this.maxSize = maxSize;
+        charStack = new char[maxSize];
     }
 
-    // inbuild method to reverse string
-    public String getReverseStringOutOfbox(String input){
-        String output = new StringBuilder(input).reverse().toString();
-        return output;
+    public void push(char c){
+        top++;
+        charStack[top] = c;
     }
+
+    public char pop(){
+        int old_top = top;
+        top--;
+        return charStack[old_top];
+    }
+
+    public boolean isEmpty(){
+        return top < 0;
+    }
+
 }
 
