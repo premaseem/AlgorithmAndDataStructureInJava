@@ -6,16 +6,14 @@ public class ReverseStringApp {
     public String reverseByStack(String input) {
 
         CharStack cs = new CharStack(50);
-        char[] arr = input.toCharArray();
-        for(char c:arr){
-            cs.push(c);
+        for(int i=0; i<input.length();i++){
+            cs.push(input.charAt(i));
         }
 
         StringBuilder sb = new StringBuilder();
         while(!cs.isEmpty()){
             sb.append(cs.pop());
         }
-
         return sb.toString();
     }
 
