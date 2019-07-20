@@ -15,12 +15,22 @@ public class CharStackTest {
     }
 
     @Test
-    public void testReverseString(){
+    public void testReverseString1(){
         String input = "hello";
         String output = charStack.getReverseStringOutOfbox(input);
         String expected = "olleh";
         assertEquals(expected, output);
     }
+
+    @Test
+    public void testReverseString2(){
+        String input = "hello";
+        String output = charStack.reverseByLoop(input);
+        String expected = "olleh";
+        assertEquals(expected, output);
+    }
+
+
 
 
 }
