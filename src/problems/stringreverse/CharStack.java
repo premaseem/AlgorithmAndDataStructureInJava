@@ -1,4 +1,4 @@
-package datastructure.charstack;
+package problems.stringreverse;
 
 public class CharStack {
 

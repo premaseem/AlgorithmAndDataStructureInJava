@@ -1,4 +1,4 @@
-package datastructure.charstack;
+package problems.stringreverse;
 
 import org.junit.Test;
 
