@@ -1,4 +1,4 @@
-package datastructure.simplequeue;
+package tdd.datastructure.simplequeue;
 
 public class CustomQueue {
 

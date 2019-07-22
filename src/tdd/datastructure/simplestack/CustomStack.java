@@ -1,4 +1,4 @@
-package datastructure.simplestack;
+package tdd.datastructure.simplestack;
 
 public class CustomStack {
 

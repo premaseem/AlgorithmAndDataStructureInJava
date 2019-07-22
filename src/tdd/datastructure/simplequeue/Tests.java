@@ -1,4 +1,4 @@
-package datastructure.simplequeue;
+package tdd.datastructure.simplequeue;
 
 import org.junit.Before;
 import org.junit.Test;
