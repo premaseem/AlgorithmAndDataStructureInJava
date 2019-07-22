@@ -1,10 +1,10 @@
-package junittests;
+package others.junittests;
 
 import org.junit.Test;
-import org.junit.Ignore;
+
 import static org.junit.Assert.assertEquals;
 
-public class TestJunit1 {
+public class TestJunit2 {
 
     String message = "Robert";
     MessageUtil messageUtil = new MessageUtil(message);

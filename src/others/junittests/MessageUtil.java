@@ -1,4 +1,4 @@
-package junittests;
+package others.junittests;
 
 public class MessageUtil {
     private String message;

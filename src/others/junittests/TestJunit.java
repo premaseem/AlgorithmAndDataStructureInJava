@@ -1,4 +1,4 @@
-package junittests;
+package others.junittests;
 
 import junit.framework.TestCase;
 import org.junit.Test;

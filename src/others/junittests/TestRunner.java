@@ -1,4 +1,4 @@
-package junittests;
+package others.junittests;
 
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
