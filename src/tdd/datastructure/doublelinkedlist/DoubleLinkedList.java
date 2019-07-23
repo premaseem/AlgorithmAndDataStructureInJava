@@ -7,7 +7,7 @@ public class DoubleLinkedList {
 
         public void insert(int data){
             Node node = new Node(data);
-            Node current = first;
+            Node current = last;
 
             if( current == null){
                 first = node;
@@ -15,9 +15,6 @@ public class DoubleLinkedList {
                 return;
             }
 
-            while(current.next !=null){
-                current = current.next;
-            }
             current.next = node;
             node.previous = current;
             last = node;
