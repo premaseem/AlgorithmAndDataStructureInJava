@@ -50,5 +50,49 @@ public class DoubleLinkedList {
             }
         System.out.println(" ]");
     }
+
+    public boolean deleteNodeWith(int data){
+        Node target = getTargetNode(data);
+        if (target == null){
+            return false;
+        }
+        Node after = target.next;
+        Node before = target.previous;
+
+        before.next = after;
+        after.previous = before;
+        return true;
+    }
+
+    public boolean insertNodeAfter(int key, int data){
+        Node target = getTargetNode(key);
+        if (target == null){
+            return false;
+        }
+
+        Node newNode = new Node(data);
+
+
+        Node after = target.next;
+        target.next = newNode;
+        newNode.next = after;
+        newNode.previous = target;
+//        Node before = target.previous;
+//
+//        before.next = after;
+//        after.previous = before;
+        return true;
+    }
+
+    private Node getTargetNode(int key){
+            Node current = first;
+            while(current != null ){
+                if(current.data == key){
+                    return current;
+                }
+                current = current.next;
+            }
+            return null;
+    }
 }
 
