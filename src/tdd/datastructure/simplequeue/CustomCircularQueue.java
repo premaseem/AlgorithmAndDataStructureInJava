@@ -26,12 +26,11 @@ public class CustomCircularQueue extends CustomQueue {
     }
 
     public void remove(){
-        if(front < rear && front < maxSize){
-            front++;
-            items--;
-        }else{
-            System.out.println("no element to remove");
-
+        front++;
+        items--;
+        if(front == maxSize){
+            front =0;
         }
+
     }
 }
