@@ -5,6 +5,9 @@ public class SearchApp {
     // return the index of number which matches search result
     public int binarySearch(int[] arr, int match) {
 
+        // bp = begining pointer
+        // ep = end pointer
+        // mp = middle pointer
         int bp = 0, ep = arr.length-1;
 
         while (bp <= ep) {
@@ -14,7 +17,6 @@ public class SearchApp {
             if (retrievedNum == match) {
                 return mp;
             }
-
 
             if (match < retrievedNum) {
             // since we have searched object at ap so lets reduce the end pointer not to include it. Can stuck if we do not move it
@@ -28,5 +30,22 @@ public class SearchApp {
         return -1;
     }
 
+
+    public int binarySearchRecursive(int [] arr, int bp, int ep, int value){
+        System.out.printf("\nsearch range [%s .. %s]",bp, ep);
+        if( bp > ep){
+            return -1;
+        }
+
+        int mp = (bp + ep) / 2;
+        if (value == arr[mp]) {
+            return mp;
+        }
+        if (value > arr[mp]) {
+            return binarySearchRecursive(arr, mp+1,ep,value);
+        }else{
+            return binarySearchRecursive(arr, bp,mp-1,value);
+        }
+    }
 
 }

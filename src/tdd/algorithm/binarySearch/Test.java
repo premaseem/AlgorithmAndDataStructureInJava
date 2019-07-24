@@ -15,4 +15,14 @@ public class Test {
         assertEquals(7,binarySearcher.binarySearch(arr1, 22));
         assertEquals(9,binarySearcher.binarySearch(arr1, 50));
     }
+
+    @org.junit.Test
+    public void testBinarySearchRecursive(){
+        int[] arr1 = {10,20,30,40,50,60,70,80,90,100};
+        assertEquals(2,binarySearcher.binarySearchRecursive(arr1, 0,9,30));
+        assertEquals(9,binarySearcher.binarySearchRecursive(arr1, 0,9,100));
+        assertEquals(4,binarySearcher.binarySearchRecursive(arr1, 0,9,50));
+        assertEquals(-1,binarySearcher.binarySearchRecursive(arr1, 0,9,32));
+    }
+
 }
