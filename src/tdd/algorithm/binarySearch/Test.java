@@ -25,4 +25,10 @@ public class Test {
         assertEquals(-1,binarySearcher.binarySearchRecursive(arr1, 0,9,32));
     }
 
+    @org.junit.Test
+    public void testLinearSearchRecursive(){
+        int[] arr1 = {10,20,30,40,50,60,70,80,90,100};
+        assertEquals(2,binarySearcher.linearSearchRecursive(arr1, 0,30));
+        assertEquals(-1,binarySearcher.linearSearchRecursive(arr1, 0,31));
+    }
 }

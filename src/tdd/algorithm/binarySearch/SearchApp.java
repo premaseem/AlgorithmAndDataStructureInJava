@@ -48,4 +48,16 @@ public class SearchApp {
         }
     }
 
+    public int linearSearchRecursive(int [] arr, int index, int value){
+        System.out.println("searching at index "+index);
+        if(index >= arr.length){
+            return -1;
+        }
+        if (arr[index] == value){
+            return index;
+        }else {
+            return linearSearchRecursive(arr, index +1, value);
+        }
+    }
+
 }
