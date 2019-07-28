@@ -13,9 +13,9 @@ public class App {
             smallestIndex = j;
              }
            }
-        int temp = arr[i];
+        int swap = arr[i];
         arr[i] = arr[smallestIndex];
-        arr[smallestIndex] = temp;
+        arr[smallestIndex] = swap;
     }
     }
 
