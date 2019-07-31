@@ -1,4 +1,4 @@
-package problems.stringreverse;
+package codechallenge.easy.stringReverse;
 
 import org.junit.Test;
 

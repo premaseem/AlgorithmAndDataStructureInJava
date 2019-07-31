@@ -1,4 +1,4 @@
-package problems.stringreverse;
+package codechallenge.easy.stringReverse;
 
 public class CharStack {
 
