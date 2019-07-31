@@ -20,7 +20,8 @@ import org.junit.Test;
 
 public class Code {
 
-    String findLongestWord(String sen) {
+    // using regex
+    String findLongestWord1(String sen) {
         String[] words = sen.toLowerCase().split("[^A-Za-z0-9]");
         int maxIndex = 0;
         for (int i = 1; i < words.length; i++) {
@@ -31,12 +32,41 @@ public class Code {
         return words[maxIndex];
     }
 
+    // using custom tokenization
+    String findLongestWord2(String sen) {
+        String[] words = new String[15];
+
+        int k=0;
+        for (int i = 0; i < sen.length(); i++) {
+            int ascii = (int) sen.charAt(i);
+            if ((ascii<65 || ascii>90) && (ascii<97 || ascii>122)){
+                k++;
+            }
+            if(words[i]==null){
+                words[i]="";
+            }
+            words[k] = words[k]+sen.charAt(i);
+        }
+        int maxIndex = 0;
+        for (int i = 1; i < words.length; i++) {
+
+            if (words[i]!= null && words[i].length() > words[maxIndex].length()) {
+                maxIndex = i;
+            }
+        }
+        return words[maxIndex].trim();
+    }
+
 
     @Test
     public void test() {
         Code c = new Code();
-        Assert.assertEquals("love", c.findLongestWord("I love dogs"));
-        Assert.assertEquals("time", c.findLongestWord("fun&!! time"));
+
+        Assert.assertEquals("love", c.findLongestWord1("I love dogs"));
+        Assert.assertEquals("time", c.findLongestWord1("fun&!! time"));
+
+        Assert.assertEquals("love", c.findLongestWord2("I love dogs"));
+        Assert.assertEquals("time", c.findLongestWord2("fun&!! time"));
 
     }
 }
