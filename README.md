@@ -2,20 +2,20 @@
 
 If you are interested in java and prepraing for coding test, this repository can help you. Star this repo, fork it or clone and start running the code. This uses Java 8. 
 
-### Code challenges: 
-Easy, Medium and Hard code puzzles with working code solutions.
-
-### Java Concepts: 
-Has working code explain to understand fundamental and advance concepts with working code eg. cloning, threads. 
-
 ### Algorithms: 
 Has 3 different code base folder with tests which has different algos eg. bubble sort, merge sort, quick sort. 
 
 ### DataStructures: 
 Has 3 different code base folder with tests which has different ADT abstract data type or custom implementation of Array list, linked list, queue, stack etc. 
 
+### Code challenges: 
+Easy, Medium and Hard code puzzles with working code solutions. The more you challenge yourself, the better code you become :-) 
+
+### Java Concepts: 
+Has working code explain to understand fundamental and advance concepts with working code eg. cloning, threads. 
+
 ### Notes: 
-Several diagrams to understand concepts easily
+Several diagrams, pds and other notes to help you understand better.
 
 
 Hope this will help, you can look at you tube video which has detailed code walk through on my youtube channel. 
