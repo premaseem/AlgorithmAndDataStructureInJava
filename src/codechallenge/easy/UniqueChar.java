@@ -1,4 +1,4 @@
-package codechallenge.easy.uniqueCharacter;
+package codechallenge.easy;
 
 import org.junit.Assert;
 import org.junit.Test;

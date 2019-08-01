@@ -1,4 +1,4 @@
-package codechallenge.easy.longestWord;
+package codechallenge.easy;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -18,7 +18,7 @@ import org.junit.Test;
  * Output:"love"
  */
 
-public class Code {
+public class LongestWord {
 
     // using regex
     String findLongestWord1(String sen) {
@@ -60,7 +60,7 @@ public class Code {
 
     @Test
     public void test() {
-        Code c = new Code();
+        LongestWord c = new LongestWord();
 
         Assert.assertEquals("love", c.findLongestWord1("I love dogs"));
         Assert.assertEquals("time", c.findLongestWord1("fun&!! time"));
