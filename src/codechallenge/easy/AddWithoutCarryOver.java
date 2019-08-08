@@ -1,5 +1,8 @@
 package codechallenge.easy;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * when number is added from right to left the carry over was taken in consideration
  *          86752
@@ -8,10 +11,20 @@ package codechallenge.easy;
  *          86091 (num added without carry over)
  */
 
+
+
 public class AddWithoutCarryOver {
-    public static void main(String[] args) {
+
+    @Test
+    public void test(){
         int param1 = 349;
         int param2 = 86752;
+        Assert.assertEquals(86091, add(349,86752));
+    }
+
+
+    public int add(int param1, int param2) {
+
 
 
         String s1 = String.valueOf(param1);
@@ -44,5 +57,7 @@ public class AddWithoutCarryOver {
             finalAns = finalAns + c;
         }
         System.out.println(finalAns);
+
+        return Integer.parseInt(finalAns);
     }
 }
