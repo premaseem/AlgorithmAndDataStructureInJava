@@ -50,4 +50,10 @@ public class AlphabetSoup {
         }
         return fs;
     }
+
+    String converter2(String s) {
+        char[] ca = s.toCharArray();
+        Arrays.sort(ca);
+        return new String(ca);
+    }
 }
