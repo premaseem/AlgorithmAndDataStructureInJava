@@ -27,12 +27,19 @@ public class NonRecurringCharacter {
         Assert.assertEquals( 'd' , method2("zzd"));
         Assert.assertEquals( '0' , method2("aaee"));
 
-        // Optimized version 2 tests
+        // Optimized version 3 tests
         Assert.assertEquals( 'b' , method3("abchhyiayjj"));
         Assert.assertEquals( 's' , method3("aseema"));
         Assert.assertEquals( 'n' , method3("sonysoty"));
         Assert.assertEquals( 'd' , method3("zzd"));
         Assert.assertEquals( '0' , method3("aaee"));
+
+        // Optimized version 4 tests
+        Assert.assertEquals( 'b' , method4("abchhyiayjj"));
+        Assert.assertEquals( 's' , method4("aseema"));
+        Assert.assertEquals( 'n' , method4("sonysoty"));
+        Assert.assertEquals( 'd' , method4("zzd"));
+        Assert.assertEquals( '0' , method4("aaee"));
     }
 
 
@@ -96,4 +103,17 @@ public class NonRecurringCharacter {
         }
         return '0';
     }
+
+    // Optimized version 4.0
+    public char method4(String s){
+        for (Character c: s.toCharArray()){
+            int count = s.length() - s.replace(""+c, "").length();
+            if(count == 1){
+                System.out.println(c);
+                return c;
+            }
+        }
+        return '0';
+    }
+
 }
