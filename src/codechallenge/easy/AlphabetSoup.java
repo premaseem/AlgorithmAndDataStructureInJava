@@ -26,16 +26,22 @@ public class AlphabetSoup {
 
     @Test
     public void t(){
+        // BF version
         Assert.assertEquals("ahhloop", converter("hooplah"));
         Assert.assertEquals("bcdeeorty", converter("coderbyte"));
+
+        // Optimized version
+        Assert.assertEquals("ahhloop", converter2("hooplah"));
+        Assert.assertEquals("bcdeeorty", converter2("coderbyte"));
     }
 
+    // BF version
     String converter(String s) {
         char[] ca = s.toCharArray();
         // convert char array to List of integer
-        List<Integer> ia = new ArrayList<Integer>();
-        for (int i = 0; i < ca.length; i++) {
-            ia.add((int)ca[i]);
+        List<Character> ia = new ArrayList<>();
+        for (Character c: ca) {
+            ia.add(c);
         }
 
         // sort integers
@@ -51,8 +57,14 @@ public class AlphabetSoup {
         return fs;
     }
 
+    // Optimized version
     String converter2(String s) {
         char[] ca = s.toCharArray();
+        List<Character> lst = new ArrayList<>();
+        for(char c: ca){
+            lst.add(c);
+        }
+
         Arrays.sort(ca);
         return new String(ca);
     }
