@@ -48,8 +48,17 @@ public class ChessboardTraveling {
     {
         // If either given row number is first or
         // given column number is first
+
+        System.out.println("--------");
+        System.out.print(" "+m);
+        System.out.print(" "+n);
+        System.out.print(" "+x);
+        System.out.println(" "+y);
+
+
         if (m == x || n == y)
             return 1;
+
 
         // If diagonal movements are allowed then
         // the last addition is required.
