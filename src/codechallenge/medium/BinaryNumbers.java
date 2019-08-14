@@ -78,7 +78,7 @@ public class BinaryNumbers {
         char[] ca = toBinary(n).toCharArray();
         int mc = 0;
         int ct = 0;
-        for (int i = 0; i < ca.length - 1; i++) {
+        for (int i = 0; i < ca.length; i++) {
             if (ca[i] == '1') {
                 ct++;
                 mc = ct > mc ? ct : mc;
