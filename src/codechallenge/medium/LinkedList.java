@@ -1,23 +1,63 @@
-package codebase3.datastructures;
+package codechallenge.medium;
 
 
 import org.junit.Test;
 
-class Node<E> {
 
-    public Node(Node p, E d, Node n) {
-        prev = p;
-        next = n;
-        data = d;
+/*
+Code Challenge :
+Given: A sorted linked list and a number.
+Expectation: place the given number in sorted linked list.
+
+
+eg. Insert 45 and maintain sorting  of linked list
+Input >> 3 >> 10 >> 20 >> 35 >> 55
+Output >> 3 >> 10 >> 20 >> 35 >> 45 >> 55
+
+ */
+
+
+public class LinkedList<E> {
+
+    // Test Driven Development by Aseem Jain
+    @Test
+    public void test() {
+
+        LinkedList<Integer> ll = new LinkedList();
+        ll.addLast(3);
+        ll.addLast(10);
+        ll.addLast(20);
+        ll.addLast(35);
+        ll.addLast(55);
+
+        ll.printForwards();
+        ll.insertInSortedOrder(1);
+        ll.printForwards();
+        ll.printBackwords();
+
     }
 
-    E data;
-    Node prev;
-    Node next;
-}
 
+    void insertInSortedOrder(Integer e){
+        Node<Integer> current = first;
+        while(current != null){
+            if(current.data>= e){
+                Node<Integer> nn = new Node<>(current.prev,e, current);
+                if(current.prev != null){
+                    current.prev.next = nn;
+                }
+                current.prev = nn;
+                // head the head or first element
+                if ((Integer)first.data > e){
+                    first = nn;
+                }
+                return;
+            }
+            current = current.next;
 
-public class DoublyLinkedList<E> {
+        }
+    }
+
 
     Node first;
     Node last;
@@ -106,7 +146,7 @@ public class DoublyLinkedList<E> {
         System.out.println(" \n Print forwards");
         Node n = first;
         while (n != null) {
-            System.out.print(">> " + n.data);
+            System.out.print(" >> " + n.data);
             n = n.next;
         }
     }
@@ -115,55 +155,26 @@ public class DoublyLinkedList<E> {
         System.out.println(" \n Print Backwords");
         Node n = last;
         while (n != null) {
-            System.out.print(">> " + n.data);
+            System.out.print(" >> " + n.data);
             n = n.prev;
         }
     }
 
 
-    // Test Driven Development by Aseem Jain
-    @Test
-    public void test() {
-
-        DoublyLinkedList<String> ll = new DoublyLinkedList();
-        ll.addFirst("Zero");
-        ll.addFirst("first");
-        ll.addFirst("second");
-
-        assert 3 == ll.size();
-
-        ll.printForwards();
-        ll.printBackwords();
-
-        ll.addLast("second last");
-        ll.addLast("last");
-
-
-        assert 5 == ll.size();
-
-
-        assert "second" == ll.removeFirst();
-        assert 4 == ll.size();
-        ll.printForwards();
-        ll.printBackwords();
-
-        assert "last" == ll.removeLast();
-        assert 3 == ll.size();
-        ll.printForwards();
-        ll.printBackwords();
-
-        ll.removeLast();
-        assert 2 == ll.size();
-        ll.removeLast();
-        assert 1 == ll.size();
-        ll.removeLast();
-
-        ll.printForwards();
-        ll.printBackwords();
 
 
 
+}
+
+class Node<E> {
+
+    public Node(Node p, E d, Node n) {
+        prev = p;
+        next = n;
+        data = d;
     }
 
-
+    E data;
+    Node prev;
+    Node next;
 }
