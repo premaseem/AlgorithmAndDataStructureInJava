@@ -31,24 +31,35 @@ public class LinkedList<E> {
         ll.addLast(55);
 
         ll.printForwards();
-        ll.insertInSortedOrder(1);
+        ll.insertInSortedOrder(65);
         ll.printForwards();
         ll.printBackwords();
 
+        // assert if linked list is sorted.
+        for(Node<Integer> n = ll.first; n.next != null; n = n.next){
+            if (n.next != null && (int)n.next.data < n.data){
+                assert false;
+            }
+        }
     }
 
 
-    void insertInSortedOrder(Integer e){
+    void insertInSortedOrder(Integer e) {
         Node<Integer> current = first;
-        while(current != null){
-            if(current.data>= e){
-                Node<Integer> nn = new Node<>(current.prev,e, current);
-                if(current.prev != null){
+        if (null == first) {
+            Node<Integer> nn = new Node<>(null, e, null);
+            first = nn;
+            last = nn;
+        }
+        while (current != null) {
+            if (current.data >= e) {
+                Node<Integer> nn = new Node<>(current.prev, e, current);
+                if (current.prev != null) {
                     current.prev.next = nn;
                 }
                 current.prev = nn;
                 // head the head or first element
-                if ((Integer)first.data > e){
+                if ((Integer) first.data > e) {
                     first = nn;
                 }
                 return;
@@ -56,6 +67,11 @@ public class LinkedList<E> {
             current = current.next;
 
         }
+        //
+        Node<Integer> nn = new Node<>(last, e, null);
+        last.next = nn;
+        last = nn;
+
     }
 
 
@@ -152,16 +168,13 @@ public class LinkedList<E> {
     }
 
     void printBackwords() {
-        System.out.println(" \n Print Backwords");
+        System.out.println(" \n Print Backwards");
         Node n = last;
         while (n != null) {
             System.out.print(" >> " + n.data);
             n = n.prev;
         }
     }
-
-
-
 
 
 }
