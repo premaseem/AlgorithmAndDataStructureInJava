@@ -1,6 +1,6 @@
 # What are the contents of this repository. 
 
-If you are interested in java and prepraing for coding test, this repository can help you. Star this repo, fork it or clone and start running the code. This uses Java 8. 
+If you are interested in java and preparing for coding test, this repository can help you. Star this repo, fork it or clone and start running the code. This uses Java 8. 
 
 ### Algorithms: 
 Has 3 different code base folder with tests which has different algos eg. bubble sort, merge sort, quick sort. 
@@ -17,12 +17,18 @@ Has working code explain to understand fundamental and advance concepts with wor
 ### Notes: 
 Several diagrams, pds and other notes to help you understand better.
 
+## Code is demoed and explained in videos on my :
+The play list for Algorithm and Data structure is 
+https://www.youtube.com/watch?v=Qq8aW7EpKnE&list=PL13Vva6TJcSvS0sGHcy9dwhm1EcSGFRoZ
 
+### Subscribe my Youtube channel
 Hope this will help, you can look at you tube video which has detailed code walk through on my youtube channel. 
-https://www.youtube.com/user/premaseemutube
+Please subscribe the channel: https://www.youtube.com/user/premaseemutube
 
-The play list for Algorithm and Data structure is https://www.youtube.com/watch?v=Qq8aW7EpKnE&list=PL13Vva6TJcSvS0sGHcy9dwhm1EcSGFRoZ
+## You can get more details on my website: 
+https://premaseem.wordpress.com/category/coding-challenge/
 
-
-You can get more detais on my website: 
-https://premaseem.wordpress.com/
+## Follow me on
+LinkedIn: http://in.linkedin.com/in/premaseem
+Facebook: https://www.facebook.com/premaseem
+Twitter:  https://twitter.com/premaseem
