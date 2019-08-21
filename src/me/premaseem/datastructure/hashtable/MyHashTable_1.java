@@ -1,12 +1,31 @@
 package me.premaseem.datastructure.hashtable;
 
-public class HashTable {
+public class MyHashTable_1 {
+
+    MyHashTable ht = new MyHashTable(13);
+    @org.junit.Test
+    public void test(){
+        ht.insert("srisri");
+        ht.insert("srisri2");
+        ht.insert("SriSri");
+        ht.insert("srisrI");
+        ht.insert("srisri");
+        ht.insert("srisri1");
+        ht.insert("srisri3");
+        ht.insert("srisri4");
+
+        assert -1 == ht.find("aseem");
+        assert  0 == ht.find("srisri");
+    }
+}
+
+class MyHashTable {
 
     String[] hashArray;
     int used = 0;
     int arrSize;
 
-    public HashTable(int capacity) {
+    public MyHashTable(int capacity) {
 
         if (!isPrimeNumber(capacity)) {
             capacity = getNextPrime(capacity);
@@ -16,26 +35,26 @@ public class HashTable {
     }
 
     // returns preferred index
-    int hashFunc1(String word){
+    int hashFunc1(String word) {
         int hashVal = word.hashCode();
         hashVal = hashVal % arrSize;
 
-        if(hashVal <0){
+        if (hashVal < 0) {
             hashVal = hashVal + arrSize;
         }
         return hashVal;
     }
 
     // returns step size
-    int hashFunc2(int hashVal){
+    int hashFunc2(int hashVal) {
         return 3 - hashVal % 3;
     }
 
-    public boolean insert(String word){
+    public boolean insert(String word) {
         int hashVal = hashFunc1(word);
         int stepSize = hashFunc2(hashVal);
 
-        while(hashArray[hashVal]!= null){
+        while (hashArray[hashVal] != null) {
             hashVal = hashVal + stepSize;
             hashVal = hashVal % arrSize;
         }
@@ -45,11 +64,11 @@ public class HashTable {
         return true;
     }
 
-    public int find(String word){
+    public int find(String word) {
         int hashVal = hashFunc1(word);
         int stepSize = hashFunc2(hashVal);
-        while(hashArray[hashVal] != null){
-            if(hashArray[hashVal].equalsIgnoreCase(word)){
+        while (hashArray[hashVal] != null) {
+            if (hashArray[hashVal].equalsIgnoreCase(word)) {
                 return hashVal;
             }
             hashVal += stepSize;
@@ -75,6 +94,4 @@ public class HashTable {
             }
         }
     }
-
-
 }
