@@ -14,44 +14,46 @@ hence making the queue behave like a circular data structure.
  */
 public class CircularQueueWithLinkedList {
 
-    LinkedList<String> ll = new LinkedList();
-    Integer capacity = 5;
+    LinkedList<String> q = new LinkedList<>();
+    Integer maxItems = 5;
     Integer size = 0;
 
-    boolean isEmpty(){
-        return size ==0;
+    boolean isFull() {
+        return maxItems == size;
     }
 
-    boolean isFull(){
-        return size == capacity;
+    boolean isEmpty() {
+        return size == 0;
     }
 
-    String peekFront(){
-        return ll.getFirst();
+    String peekFront() {
+        return q.peekFirst();
     }
 
-    String peekBack(){
-        return ll.getLast();
+    String peekBack() {
+        return q.peekLast();
     }
 
-    void enQueue(String e){
-        if(isFull()){
-            ll.removeFirst();
+    void enQueue(String i) {
+        if (isFull()) {
+            q.removeFirst();
         } else {
             size++;
         }
-
-        ll.addLast(e);
+        q.addLast(i);
     }
 
-    String deQueue(){
-        if (isEmpty()){
+    String deQueue() {
+
+        if (isEmpty()) {
             return null;
         }
+        String i = q.peekFirst();
+        q.removeFirst();
         size--;
-        return ll.pop();
-    }
+        return i;
 
+    }
 
 
     // Test Driven Development by Aseem Jain
@@ -60,8 +62,8 @@ public class CircularQueueWithLinkedList {
         CircularQueueWithLinkedList cq = new CircularQueueWithLinkedList();
         cq.enQueue("a1");
         assert "a1" == cq.peekBack();
-
-        // new front element
+//
+//        // new front element
         assert "a1" == cq.peekFront();
 
 
