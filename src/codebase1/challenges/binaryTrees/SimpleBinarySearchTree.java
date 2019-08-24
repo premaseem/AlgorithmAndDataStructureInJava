@@ -61,7 +61,7 @@ public class SimpleBinarySearchTree {
     }
 
     //
-    // Utils
+    // me.premaseem.MyUtils
     //
     public void prettyPrint() {
         // Hard coded print out of binary tree depth = 3

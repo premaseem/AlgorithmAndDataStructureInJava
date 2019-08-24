@@ -1,10 +1,13 @@
 package codebase1.datastructures.binaryTree;
 
+import java.util.Set;
+import java.util.TreeSet;
+
 public class BinaryTreeByArray {
 	int [] arr;
 	int lastUsedIndex;
 	
-
+	Set<Integer> a =  new TreeSet();
 	//Constructor for blank Tree
 	public BinaryTreeByArray(int size) {
 		arr = new int[size+1];

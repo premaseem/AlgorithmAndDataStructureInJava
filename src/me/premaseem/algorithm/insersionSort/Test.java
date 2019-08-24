@@ -1,6 +1,7 @@
 package me.premaseem.algorithm.insersionSort;
 
 
+import me.premaseem.MyUtils;
 
 public class Test {
 
@@ -8,15 +9,8 @@ public class Test {
 
     @org.junit.Test
     public void testSort() {
-        int arr[] = {40, 20, 5, 2,};
+        int arr[] = MyUtils.getIntArr();
         app.arrSort(arr);
-//        app.printArr(arr);
-
-        for (int i = 0; i < arr.length - 1; i++) {
-            System.out.println(arr[i]);
-            if (arr[i] > arr[i + 1]) {
-                assert false;
-            }
-        }
+        MyUtils.isArrSorted(arr);
     }
 }

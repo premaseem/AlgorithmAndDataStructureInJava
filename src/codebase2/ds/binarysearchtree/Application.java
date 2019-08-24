@@ -20,10 +20,10 @@ public class Application {
 		tree.insert(9, "Four");
 		tree.insert(33, "Thirty three");
 		
-//		System.out.println(tree.findMin().key);
-//		System.out.println(tree.findMax().key);
+		System.out.println(tree.findMin().key);
+		System.out.println(tree.findMax().key);
 		
-//		System.out.println(tree.remove(10)); // print true
+		System.out.println(tree.remove(10)); // print true
 		
 //		System.out.println(tree.findMin().key); // 15
 //		System.out.println(tree.findMax().key); // 15
