@@ -18,13 +18,12 @@ public class MyUtils {
 
     }
 
-    static public boolean isArrSorted(int[] arr) {
+    static public boolean isArrSorted(int[] ar) {
         System.out.print("Is array sorted? ... ");
-        printArr(arr);
-        for (int i = 0; i < arr.length - 1; i++) {
-            if (arr[i + 1] < arr[i]) {
-                printArr(arr);
-                System.out.println("No, problem is " + arr[i + 1] + " > " + arr[i]);
+        printArr(ar);
+        for (int i = 0; i < ar.length - 1; i++) {
+            if (ar[i + 1] < ar[i]) {
+                System.out.println("No, problem is " + ar[i + 1] + " > " + ar[i]);
                 assert false;
             }
 
