@@ -13,8 +13,8 @@ public class Merge2ArraysInsort {
     @Test
     public void test() {
 
-        int a1[] = {20, 20, 50, 100, 140, 180};
-        int a2[] = {10, 30, 90, 100};
+        int a1[] = {20, 20, 50, 100};
+        int a2[] = {10, 30, 90, 100,110,150};
 
         int[] ints = mergeArrayAndsort(a2, a1);
         MyUtils.isArrSorted(ints);
@@ -24,37 +24,34 @@ public class Merge2ArraysInsort {
 
         int[] c = new int[a.length + b.length];
 
-        int i = 0, i1 = 0, i2 = 0;
-        for (; i < c.length; i++) {
+        int i1=0,i2=0;
+        for (int i = 0; i < c.length; i++) {
 
-            int i1e, i2e;
-            if (i1 < a.length) {
-                i1e = a[i1];
-            } else {
-                while (i2 < b.length) {
-                    c[i] = b[i2++];
-                    i++;
+            int ae=0; int be=0;
+            if(i1 < a.length){
+                ae= a[i1];
+            } else{
+                while(i2<b.length){
+                    c[i++] = b[i2++];
                 }
                 break;
             }
 
-            if (i2 < b.length) {
-                i2e = b[i2];
-            } else {
-                while (i1 < a.length) {
-                    c[i] = a[i1++];
-                    i++;
+            if(i2 < b.length){
+                be= b[i2];
+            }else{
+                while(i1<a.length){
+                    c[i++] = a[i1++];
                 }
                 break;
             }
 
-            if (i1e < i2e) {
-                c[i] = i1e;
-                i1++;
-            } else {
-                c[i] = i2e;
-                i2++;
+            if(ae<be){
+                c[i] = a[i1++];
+            }else{
+                c[i] = b[i2++];
             }
+
         }
 
         MyUtils.printArr(c);
