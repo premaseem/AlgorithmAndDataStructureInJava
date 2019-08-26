@@ -28,6 +28,27 @@ Please subscribe the channel: https://www.youtube.com/user/premaseemutube
 ## You can get more details on my website: 
 https://premaseem.wordpress.com/category/coding-challenge/
 
+### Important link 
+System Design Interview
+
+#### Github curated list
+https://github.com/yangshun/tech-interview-handbook/tree/master/experimental/design
+
+#### Grokking the System Design Interview: 
+https://www.educative.io/collection/5668639101419520/5649050225344512
+
+#### Software Engineering Radio
+https://www.se-radio.net
+
+#### Code refactoring website 
+https://refactoring.guru/
+
+#### Free on line white boarding tool 
+https://www.tutorialspoint.com/free_online_whiteboard.htm
+
+
+
+
 ## Follow me on
 LinkedIn: http://in.linkedin.com/in/premaseem
 Facebook: https://www.facebook.com/premaseem
