@@ -1,7 +1,6 @@
 package me.premaseem.algorithm.quicksort;
 
 import me.premaseem.MyUtils;
-import org.junit.Assert;
 import org.junit.Test;
 
 public class QuickSort {
@@ -18,29 +17,21 @@ public class QuickSort {
 
     int partition(int arr[], int low, int high)
     {
-        int pivot = arr[high];
-        int i = (low-1); // index of smaller element
-        for (int j=low; j<high; j++)
+        int pi = (low-1); // index of smaller element
+        for (int j=low; j<=high; j++)
         {
             // If current element is smaller than the pivot
-            if (arr[j] < pivot)
+            if (arr[j] <= arr[high])
             {
-                i++;
+                pi++;
 
                 // swap arr[i] and arr[j]
-                int temp = arr[i];
-                arr[i] = arr[j];
+                int temp = arr[pi];
+                arr[pi] = arr[j];
                 arr[j] = temp;
             }
         }
-
-        // swap arr[i+1] and arr[high] (or pivot)
-        i++;
-        int temp = arr[i];
-        arr[i] = arr[high];
-        arr[high] = temp;
-
-        return i;
+        return pi;
     }
 
 
