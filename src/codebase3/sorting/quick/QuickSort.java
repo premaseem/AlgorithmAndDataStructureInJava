@@ -11,10 +11,10 @@ public class QuickSort {
 
 	
 	static int partition(int[] array, int p, int q) {
-		int pivot = q;
+//		int pivot = q;
 		int i = p-1;
 		for (int j = p; j <= q; j++) {
-			if (array[j] <= array[pivot]) {
+			if (array[j] <= array[q]) {
 				i++;
 				int temp = array[i];
 				array[i] = array[j];

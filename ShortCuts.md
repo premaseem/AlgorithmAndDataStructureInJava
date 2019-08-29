@@ -114,10 +114,22 @@ Custom Code:
      }
 
 ============================================
+## Find Tail or last element in linked list 
 Out of the box:
+    
+    LinkedList.getLast();        
+        
+Custom Code:
+
+    // Iterate through list until last node's current is null
+    while (current.next != null) {
+        current = current.next;
+    }
+
 
 Custom Code:
 ============================================
 Out of the box:
 
 Custom Code:
+============================================

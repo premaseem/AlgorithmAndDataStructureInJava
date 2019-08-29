@@ -21,18 +21,11 @@ public class MergeSort {
     }
 
     private void mergeSort(int[] a, int l, int r) {
-//        if(r > l) {
-//            int m =  (r-l) / 2;
-//            mergeSort(a,l,m);
-//            mergeSort(a,m+1,r);
-//            merge(a,l,m,r);
-//        }
 
         if (r > l) {
             int m = (l + r) / 2;
             mergeSort(a,l,m);
             mergeSort(a,m+1,r);
-//            realMerge(a, l, m, r);
             merge(a, l, m, r);
         }
     }
@@ -76,8 +69,6 @@ public class MergeSort {
                 a[i] = re;
                 ri++;
             }
-
-
         }
     }
 }

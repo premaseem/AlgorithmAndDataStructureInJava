@@ -1,0 +1,14 @@
+List of todo difficult or important questions:
+
+### Reverse a doubly linked list
+https://www.hackerrank.com/challenges/reverse-a-doubly-linked-list/problem?filter=java8&filter_on=language&h_l=interview&page=1&playlist_slugs%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D=linked-lists
+
+
+### Inserting a Node Into a Sorted Doubly Linked List
+https://www.hackerrank.com/challenges/insert-a-node-into-a-sorted-doubly-linked-list/problem?h_l=interview&playlist_slugs%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D=linked-lists
+ 1. Empty list
+ 2. At the beginning of the list
+ 3. Somewhere at the middle of the list
+ 4. At the end of the list
+
+ 

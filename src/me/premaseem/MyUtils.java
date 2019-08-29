@@ -3,7 +3,7 @@ package me.premaseem;
 public class MyUtils {
 
     static public int[] getIntArr() {
-        int[] arr = new int[]{70, 20, 30, 80, 40, 100};
+        int[] arr = new int[]{70, -20, 30, 0, 40, 100};
         System.out.print("Unsorted array looks like => ");
         printArr(arr);
         return arr;

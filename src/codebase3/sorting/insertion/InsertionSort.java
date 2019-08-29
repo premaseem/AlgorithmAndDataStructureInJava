@@ -4,7 +4,8 @@ public class InsertionSort {
 
     static void insertionSort(int[] A) {
         for (int i = 1; i < A.length; i++) {
-            int tmp = A[i], j = i;
+            int j = i;
+            int tmp = A[j];
             while (j > 0 && A[j - 1] > tmp) {
                 A[j] = A[j - 1];
                 j--;
