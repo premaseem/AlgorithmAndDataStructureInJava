@@ -47,9 +47,20 @@ https://refactoring.guru/
 https://www.tutorialspoint.com/free_online_whiteboard.htm
 
 
+===================================================
 
+
+Github Code Repository for coding challenge: 
+https://github.com/premaseem/AlgoAndDataStructureInJava/tree/master/src/crackingTheCodingInterview
+
+Youtube playlist for more video like this:
+https://www.youtube.com/playlist?list=PL13Vva6TJcSvUno2JCl91xSvO-ZlkPO2m
 
 ## Follow me on
 LinkedIn: http://in.linkedin.com/in/premaseem
 Facebook: https://www.facebook.com/premaseem
 Twitter:  https://twitter.com/premaseem
+My Blog: https://premaseem.wordpress.com
+
+Tags: 
+Cracking the coding interview, coding puzzle, Cracking the coding interview java solution, coding problem in java
