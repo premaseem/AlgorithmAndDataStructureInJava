@@ -1,4 +1,6 @@
-import util.StopWatch;
+package dynamicProgramming.oneDimmensionalDynamic;
+
+import dynamicProgramming.twoDimmensionalDynamic.StopWatch;
 
 public class RobHouses {
     public static void main(String[] args) {

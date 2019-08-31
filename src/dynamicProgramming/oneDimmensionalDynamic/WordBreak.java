@@ -1,4 +1,7 @@
-import util.StopWatch;
+
+package dynamicProgramming.oneDimmensionalDynamic;
+
+import dynamicProgramming.twoDimmensionalDynamic.StopWatch;
 
 import java.util.Arrays;
 import java.util.HashSet;
