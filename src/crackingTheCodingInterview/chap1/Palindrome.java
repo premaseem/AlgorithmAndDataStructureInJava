@@ -21,7 +21,7 @@ public class Palindrome {
         assert solution1("Rats live on no evil star");
         assert !solution1("Ha*K");
 
-//        assert solution2("Rats live on no evil star");
+        assert solution2("Rats live on no evil star");
         assert !solution2("Ha*K");
 
     }
