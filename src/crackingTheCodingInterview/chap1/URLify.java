@@ -18,6 +18,7 @@ public class URLify {
 
         assert "Mr%20John%20Smith".equalsIgnoreCase(solution1("Mr John Smith "));
         assert "Mr%20John%20Smith".equalsIgnoreCase(solution2("Mr John Smith "));
+        assert "Mr%20John%20Smith".equalsIgnoreCase(solution3("Mr John Smith "));
 
     }
 
@@ -46,4 +47,10 @@ public class URLify {
         }
         return a;
     }
+
+    private String solution3(String s) {
+        return s.trim().replaceAll(" ", "%20");
+    }
+
+
 }
