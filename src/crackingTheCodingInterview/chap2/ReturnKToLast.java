@@ -3,6 +3,11 @@ package crackingTheCodingInterview.chap2;
 import me.premaseem.myLib.MyDLLNode;
 import org.junit.Test;
 
+/**
+### Return Kth to Last:
+Implement an algorithm to find the kth to last element of a singly linked list.
+
+ */
 public class ReturnKToLast {
 
     // Test Driven Development by Aseem Jain
@@ -24,33 +29,31 @@ public class ReturnKToLast {
         // count total number in one loop.
         // iterate for last - k to return element
         MyDLLNode c = head;
-        int len =0;
-        while(c != null){
+        int len = 0;
+        while (c != null){
             len++;
             c = c.next;
         }
 
-        c = head;
-        for (int i = 1; i <= len-k ; i++, c = c.next) {
+        System.out.println("the total leng is " + len);
 
+        c = head;
+        for (int i = 1; i <= len -k; i++) {
+            c = c.next;
         }
             return c;
     }
 
     private MyDLLNode solution2(MyDLLNode head, int k) {
-
-        // count total number in one loop.
-        // iterate for last - k to return element
         MyDLLNode c = head;
-        while(c.next != null){
+        while (c.next != null){
             c = c.next;
         }
 
-        MyDLLNode last = c;
-
-        for (int i = 1; i < k ; i++, last = last.prev) {
-
+        for (int i = 1; i < k ; i++) {
+            c = c.prev;
         }
-        return last;
+
+        return c;
     }
 }
