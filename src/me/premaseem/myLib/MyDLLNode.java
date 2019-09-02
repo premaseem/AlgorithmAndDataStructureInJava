@@ -1,4 +1,4 @@
-package me.premaseem.reusable;
+package me.premaseem.myLib;
 
 public class MyDLLNode {
     public int data;

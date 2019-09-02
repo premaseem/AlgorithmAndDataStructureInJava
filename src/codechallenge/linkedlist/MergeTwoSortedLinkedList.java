@@ -1,6 +1,6 @@
 package codechallenge.linkedlist;
 
-import me.premaseem.reusable.MySLLNode;
+import me.premaseem.myLib.MySLLNode;
 import org.junit.Test;
 
 /*
