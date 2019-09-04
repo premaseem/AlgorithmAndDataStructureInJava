@@ -25,4 +25,13 @@ public class MyDLLNode {
         }
 
     }
+
+    public void print(){
+        MyDLLNode c = this;
+        System.out.print("Doulbe linked list ");
+        while(c!= null){
+            System.out.print(" >> " + c.data);
+            c = c.next;
+        }
+    }
 }

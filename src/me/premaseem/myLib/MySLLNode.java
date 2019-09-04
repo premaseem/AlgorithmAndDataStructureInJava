@@ -23,4 +23,14 @@ public class MySLLNode {
         }
 
     }
+
+    public void print(){
+        MySLLNode c = this;
+        System.out.print(" Singly Linked List is ");
+        while(c!=null){
+            System.out.print( " >> " + c.data );
+            c = c.next;
+        }
+        System.out.println();
+    }
 }
