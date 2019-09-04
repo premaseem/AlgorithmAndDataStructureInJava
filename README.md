@@ -17,7 +17,7 @@ Has working code explain to understand fundamental and advance concepts with wor
 ### Notes: 
 Several diagrams, pds and other notes to help you understand better.
 
-## Code is demoed and explained in videos on my :
+## Code is demoed and explained in videos on my Youtube channel:
 The play list for Algorithm and Data structure is 
 https://www.youtube.com/watch?v=Qq8aW7EpKnE&list=PL13Vva6TJcSvS0sGHcy9dwhm1EcSGFRoZ
 

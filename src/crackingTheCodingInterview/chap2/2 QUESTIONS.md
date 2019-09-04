@@ -42,3 +42,7 @@ A (corrupt) linked list in which a node's next pointer points to an earlier node
     EXAMPLE
     Input: A -> B -> C -> D -> E -> C[thesameCasearlier]
     Output: C
+    
+TODO:
+Intersection:
+Loop Detection

@@ -44,4 +44,16 @@ public class MySLLNode {
         }
         System.out.println();
     }
+
+    public MySLLNode reverse(){
+        MySLLNode c = this;
+        MySLLNode p = null;
+        while(c != null){
+            MySLLNode n = c.next;
+            c.next = p;
+            p = c;
+            c= n;
+        }
+        return p;
+    }
 }
