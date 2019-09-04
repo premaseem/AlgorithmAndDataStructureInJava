@@ -24,6 +24,17 @@ public class MySLLNode {
 
     }
 
+    public int toInt(){
+        MySLLNode c = this;
+        String ans= "";
+        while(c!= null){
+            int d = c.data;
+            ans += ""+d;
+            c = c.next;
+        }
+        return Integer.parseInt(ans);
+    }
+
     public void print(){
         MySLLNode c = this;
         System.out.print(" Singly Linked List is ");
