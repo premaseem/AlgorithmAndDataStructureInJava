@@ -52,8 +52,8 @@ public class BinaryTreeArr {
             return;
         }
 //        System.out.print("Post order traversal ");
-        pre(i*2);
-        pre(i*2+1);
+        post(i*2);
+        post(i*2+1);
         System.out.print(" >> "+a[i]);
     }
 
@@ -62,9 +62,9 @@ public class BinaryTreeArr {
             return;
         }
 //        System.out.print("In order traversal ");
-        pre(i*2);
+        in(i*2);
         System.out.print(" >> "+a[i]);
-        pre(i*2+1);
+        in(i*2+1);
     }
 
     public void level(int i){

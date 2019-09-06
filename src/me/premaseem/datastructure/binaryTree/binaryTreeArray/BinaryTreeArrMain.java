@@ -18,7 +18,7 @@ public class BinaryTreeArrMain {
 
         // delete
 //        System.out.println("delete result "+bsta.delete(7));
-        System.out.println("delete result "+bsta.delete(29));
+//        System.out.println("delete result "+bsta.delete(29));
 
         // pre order traversal
         bsta.pre(1);
