@@ -1,18 +1,19 @@
 package me.premaseem.datastructure.binarySearchTree;
 
-class N {
-    N l, r;
-    int v;
 
-    public N(int v) {
-        this.v = v;
+class Node {
+    Node left, right;
+    int data;
+
+    public Node(int d) {
+        data = d;
     }
+
 }
 
 public class BinarySearchTree {
 
-    N root;
-
+    Node root;
     // Driver Program to test above functions
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
@@ -23,6 +24,7 @@ public class BinarySearchTree {
           30      70
          /  \    /  \
        20   40  60   80 */
+
         tree.insert(50);
         tree.insert(30);
         tree.insert(20);
@@ -31,113 +33,108 @@ public class BinarySearchTree {
         tree.insert(60);
         tree.insert(80);
 
-        // print inorder traversal of the BST
-        tree.inorder();
+//      print inorder traversal of the BST
+        tree.inOrder();
 
-        tree.search(70);
-        tree.search(700);
-        tree.deleteN(30);
-        tree.deleteN(31);
-        tree.deleteN(70);
-        tree.inorder();
+        tree.search(100);
+        tree.search(30);
+
+        tree.delete(30);
+        tree.delete(30);
+        tree.delete(50);
+
+        System.out.println();
+        tree.inOrder();
     }
 
-    private void deleteN(int v) {
-        root = deleteR(root,v);
+    private void delete(int d) {
+        root = deleteR(root,d);
     }
 
-    private N deleteR(N n, int v) {
+    private Node deleteR(Node n ,int d) {
         if(n == null){
-            System.out.println("cannot delete, item not found");
             return n;
         }
-
-        if (v < n.v){
-            n.l = deleteR(n.l, v);
-        } else
-        if (v > n.v){
-            n.r = deleteR(n.r, v);
-        }
-
-        // if we are here, this means we have identified the note to delete
-        else{
-
-            // 1 child or less child
-            if(n.l == null){
-                return n.r;
+        if(d < n.data){
+            n.left = deleteR(n.left,d);
+        }else if(d > n.data){
+            n.right = deleteR(n.right,d);
+        } else {
+            // 1 or all nodes are null
+            if(n.left == null){
+                return n.right;
+            }else if (n.right == null){
+                return n.left;
             }
-            if(n.r == null){
-                return n.l;
-            }
-            // 2 childs
-                n.v = minVal(n.r); // get min value from right side and remove that node
-                deleteR(n.r,n.v);
-        }
 
+            n.data = findMin(n.right);
+            n.right = deleteR(n.right,n.data);
+            // if both node are not null
+        }
+        return n;
+
+    }
+
+    int findMin(Node n){
+        int min = n.data;
+        if(n.left != null){
+            min = n.data;
+            n = n.left;
+        }
+        return min;
+    }
+
+
+    private void insert(int d) {
+        root = insertR(root,d);
+    }
+
+    private Node insertR(Node n ,int d) {
+        if(n == null){
+            return new Node(d);
+        }
+        if(d < n.data){
+            n.left = insertR(n.left, d);
+        }else {
+            n.right = insertR(n.right, d);
+        }
         return n;
     }
 
-    int minVal(N n){
-        int minV = n.v;
-        while(n.l != null){
-            minV = n.l.v;
-            n = n.l;
 
+    void inOrder(){
+        inOrderR(root);
+    }
+
+    private void inOrderR(Node n) {
+        if(n == null){
+            return;
         }
-        return minV;
+        inOrderR(n.left);
+        System.out.print(" >> "+ n.data);
+        inOrderR(n.right);
     }
 
-    private void search(int v) {
-        searchRec(root, v);
+
+    void search(int d){
+        searchR(root, d);
     }
 
-    private void searchRec(N n, int v) {
-
-        if (n == null) {
-            System.out.println("not found");
+    private void searchR(Node n, int d) {
+        if(n == null){
+            System.out.println("not found ");
             return;
         }
 
-        if (n.v == v) {
-            System.out.println("Found");
+        if(d == n.data){
+            System.out.println("Element found :-) ");
+            return;
         }
-        if (v < n.v) {
-            searchRec(n.l, v);
-        } else if (v > n.v) {
-            searchRec(n.r, v);
+        if(d < n.data){
+            searchR(n.left, d);
+        }else {
+            searchR(n.right,d);
         }
-    }
-
-    void inorder() {
-        System.out.println("printing in order BST in sorted order ");
-        inorderRec(root);
 
     }
-
-    void inorderRec(N n) {
-        if (n != null) {
-            inorderRec(n.l);
-            System.out.print(" >> " + n.v);
-            inorderRec(n.r);
-        }
-    }
-
-    private void insert(int v) {
-        root = insert(root, v);
-
-    }
-
-    private N insert(N n, int v) {
-        if (n == null) {
-            return new N(v);
-        }
-        if (v < n.v) {
-            n.l = insert(n.l, v);
-        } else if (v > n.v) {
-            n.r = insert(n.r, v);
-        }
-        return n;
-    }
-
-
 }
