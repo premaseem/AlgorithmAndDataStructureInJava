@@ -66,7 +66,7 @@ public class Graph {
                 DFSR(vert,visited);
             }
         }
-        System.out.print(" DFS visiting "+ v);
+        System.out.println(" DFS visiting "+ v);
 
     }
 
@@ -83,7 +83,7 @@ public class Graph {
 
         while(!q.isEmpty()){
             Integer vert = q.poll();
-            System.out.print(" >>"+vert);
+            System.out.println(" BFS visiting "+vert);
 
             // getting the adjacent and adding them to q if they not been visited before
             LinkedList<Integer> adj = this.vertex[vert];
