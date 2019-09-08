@@ -125,7 +125,7 @@ class BinarySearchTree
         BinarySearchTree tree = new BinarySearchTree();
 
 		/* Let us create following BST
-			50
+		  50
 		/	 \
 		30	 70
 		/ \ / \

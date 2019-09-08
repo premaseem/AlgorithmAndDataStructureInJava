@@ -1,4 +1,4 @@
-package me.premaseem.datastructure.graph;
+package me.premaseem.datastructure.graph.busRoute;
 
 public class BusRoute {
 

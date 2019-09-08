@@ -25,19 +25,51 @@ public class Graph {
     }
 
     public static void main(String[] args) {
+        /* Let us take the graph in cyclic order
+             0
+           /   \
+          1     3
+         /       \
+        2 - - - - 4
+
+       BFS =>  >> 0 >> 1 >> 3 >> 2 >> 4
+       DFS =>  >> 4 >> 2 >> 1 >> 3 >> 0
+
+       */
+
         Graph g = new Graph(5);
 
         g.addEdge(0, 1);
-        g.addEdge(0, 2);
         g.addEdge(1, 2);
-        g.addEdge(2, 0);
-        g.addEdge(2, 3);
-        g.addEdge(3, 3);
-        g.addEdge(0, 4);
-        g.addEdge(4, 1);
+        g.addEdge(0, 3);
+        g.addEdge(3, 4);
+        g.addEdge(2, 4);
 
-        g.BFS(4);
+
+        g.BFS(0);
+        g.DFS(0);
+
     }
+
+
+    void DFS(int v){
+        boolean[] visited = new boolean[size];
+        DFSR(v,visited);
+    }
+
+    void DFSR(int v, boolean[] visited){
+
+        visited[v] = true;
+
+        for (int vert: vertex[v]) {
+            if(!visited[vert]){
+                DFSR(vert,visited);
+            }
+        }
+        System.out.print(" DFS visiting "+ v);
+
+    }
+
 
     void BFS(int v){
 
@@ -51,16 +83,20 @@ public class Graph {
 
         while(!q.isEmpty()){
             Integer vert = q.poll();
-            System.out.println(" Visiting "+vert);
+            System.out.print(" >>"+vert);
 
             // getting the adjacent and adding them to q if they not been visited before
             LinkedList<Integer> adj = this.vertex[vert];
 
             for (Integer vo:adj) {
+//                System.out.print(" checking "+vo);
                 if(!visited[vo]){
                     visited[vo] = true;
                     q.add(vo);
                 }
+//                else {
+//                    System.out.println(" already visited");
+//                }
             }
 
         }
