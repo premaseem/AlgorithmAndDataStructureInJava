@@ -29,7 +29,9 @@ Please subscribe the channel: https://www.youtube.com/user/premaseemutube
 https://premaseem.wordpress.com/category/coding-challenge/
 
 ### Important link 
-System Design Interview
+
+#### Visualize algo and DS for easy understanding
+https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/visualize/
 
 #### Github curated list
 https://github.com/yangshun/tech-interview-handbook/tree/master/experimental/design
