@@ -1,36 +1,69 @@
 package me.premaseem.datastructure.graph;
 
-import java.util.ArrayList;
+
+import java.util.LinkedList;
 
 public class Graph {
 
-    ArrayList graphArray[];
+    int size;
+    LinkedList<Integer> vertex[];
 
-    public Graph(int numOfVertices) {
-        graphArray = new ArrayList[numOfVertices];
-        for (int i = 0; i < graphArray.length; i++) {
-            graphArray[i] = new ArrayList<Integer>();
-        }
-
-    }
-
-    public void addEdge(int from, int to) {
-        graphArray[from].add(to);
-    }
-
-    public void getAdjecents(int vertex) {
-        ArrayList edges = graphArray[vertex];
-        for (Object i : edges) {
-            System.out.printf(" %s --> %s \n", vertex, i);
+    public Graph(int size){
+        this.size = size;
+        vertex = new LinkedList[size];
+        for (int i = 0; i < size; i++) {
+            vertex[i] = new LinkedList<>();
         }
     }
 
-    public void printGraphEdges() {
-        for (int i = 0; i < graphArray.length; i++) {
-            for (Object obj : graphArray[i]) {
-                System.out.printf(" %s --> %s \n", i, obj);
+    void addEdge(int p1, int p2 ){
+        if(p1 > vertex.length || p2 > vertex.length){
+            System.out.println("cannot add edge, vertex out of graph");
+            return;
+        }
+        vertex[p1].add(p2);
+    }
+
+    public static void main(String[] args) {
+        Graph g = new Graph(5);
+
+        g.addEdge(0, 1);
+        g.addEdge(0, 2);
+        g.addEdge(1, 2);
+        g.addEdge(2, 0);
+        g.addEdge(2, 3);
+        g.addEdge(3, 3);
+        g.addEdge(0, 4);
+        g.addEdge(4, 1);
+
+        g.BFS(4);
+    }
+
+    void BFS(int v){
+
+        // default marked as false for visited vertex
+        boolean[] visited = new boolean[size];
+
+        // form a queue to ensure get first and then connected neighbours
+        LinkedList<Integer> q = new LinkedList<>();
+        q.add(v);
+        visited[v] = true;
+
+        while(!q.isEmpty()){
+            Integer vert = q.poll();
+            System.out.println(" Visiting "+vert);
+
+            // getting the adjacent and adding them to q if they not been visited before
+            LinkedList<Integer> adj = this.vertex[vert];
+
+            for (Integer vo:adj) {
+                if(!visited[vo]){
+                    visited[vo] = true;
+                    q.add(vo);
+                }
             }
-        }
 
+        }
     }
+
 }
