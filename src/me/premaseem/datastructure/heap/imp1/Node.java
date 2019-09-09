@@ -1,4 +1,4 @@
-package me.premaseem.datastructure.heap;
+package me.premaseem.datastructure.heap.imp1;
 
 public class Node {
     int key;
