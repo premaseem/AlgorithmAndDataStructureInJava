@@ -30,6 +30,9 @@ https://premaseem.wordpress.com/category/coding-challenge/
 
 ### Important link 
 
+### youtube videos of CRACKING THE CODING INTERVIEW author explained all concepts with story and animation
+https://www.youtube.com/watch?v=v4cd1O4zkGw&list=PLX6IKgS15Ue02WDPRCmYKuZicQHit9kFt
+
 #### Visualize algo and DS for easy understanding
 https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/visualize/
 
