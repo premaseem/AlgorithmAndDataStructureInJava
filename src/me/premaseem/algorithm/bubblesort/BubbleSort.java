@@ -12,6 +12,7 @@ public class BubbleSort {
 
         int[] a = MyUtils.getIntArr();
         sort(a);
+
         MyUtils.isArrSorted(a);
 
     }
