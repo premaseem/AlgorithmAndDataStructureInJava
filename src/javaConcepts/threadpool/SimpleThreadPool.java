@@ -3,6 +3,19 @@ package javaConcepts.threadpool;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ *     Java Thread Pool
+ *         Java Thread pool represents a group of worker threads that are waiting for the job and reuse many times.
+ *
+ *         In case of thread pool, a group of fixed size threads are created. A thread from the thread pool is pulled out and assigned a job by the service provider. After completion of the job, thread is contained in the thread pool again.
+ *
+ *         Advantage of Java Thread Pool
+ *         Better performance It saves time because there is no need to create new thread.
+ *
+ *         Real time usage
+ *         It is used in Servlet and JSP where container creates a thread pool to process the request.
+ */
+
 class WorkerThread implements Runnable {
     private String message;
     public WorkerThread(String s){
@@ -37,3 +50,4 @@ public class SimpleThreadPool {
     }
  
 }
+
